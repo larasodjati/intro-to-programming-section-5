@@ -10,6 +10,7 @@ const correctMessage = document.getElementById('correct');
 const lessZeroMessage = document.getElementById('less-zero');
 const greaterMaxMessage = document.getElementById('greater-max');
 
+
 let targetNumber;
 let attempts = 0;
 const maxNumberOfAttempts = 5;
@@ -93,7 +94,8 @@ function setup() {
   console.log(`target number: ${targetNumber}`);
 
   // Reset number of attempts
-  const maxNumberOfAttempts = 5;
+  attempts = 0;
+  
 
   // Enable the input and submit button
   submitButton.disabled = false;
@@ -102,7 +104,6 @@ function setup() {
   hideAllMessages();
   resetButton.style.display = 'none';
 }
-
 
 submitButton.addEventListener('click', checkGuess);
 resetButton.addEventListener('click', setup);
